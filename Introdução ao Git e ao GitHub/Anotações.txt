@@ -1,0 +1,58 @@
+Link do Git: https://git-scm.com/
+
+O Git é um sistema de controle de versões distribuídos, que principalmente é utilizado para Desenvolvimento de Softwares,
+mas que pode ser utilizado para registrar históricos de edições de qualquer tipo de arquivo.
+O GitHub é uma plataforma de hospedagem de códigos-fonte e arquivos com controle de versão que utiliza o Git.
+Enquanto o Git realiza o versionamento local, o GitHub faz a hospedagem desse versionamento na nuvem, possibilitando que
+outros usuários da plataforma tenham acesso a essas versões e possam colaborar com edições desses arquivos.
+
+Como o Git funciona:
+- SHA-1
+É uma função de dispersão criptográfica projetada pela NSA, que gera um conjunto de caracteres identificador de 40 dígitos
+únicos que servem como identificador. O Git utiliza o SHA-1 para identificar os arquivos de uma forma segura e rápida.
+
+- Blobs
+É um objeto que armazena metadados do Git, que são o tipo do objeto, o tamanho do arquivo, o tipo do arquivo entre outros.
+Pode se dizer que é o bloco básico da composição.
+
+- Trees
+Armazena e aponta para tipos de blobs diferentes e para os commits, ela também contém metadados. As trees guardam o nome do
+arquivo, sendo responsável por montar toda a estrutura e onde estão localizados os arquivos. Elas também podem apontar para
+outras trees.
+
+- Commit
+É o objeto que junta todos os outros objetos, dando sentindo as alterações realizadas. Ele aponta para as trees e para o
+último commit realizado antes dele, para um autor, para uma mensagem, dando sentido as alterações realizadas nos arquivos,
+e possui um timestamp que leva data e horário em que foi criado.
+
+O motivo pelo qual o Git é tão seguro é que tanto os Blobs, as Trees e os Commits geram sempre SHA-1 específicos para cada
+um deles, e cada alteração que é feita é um blob é refletido na tree e depois refletido no commit.
+
+Gerando chave SSH para o GitHub:
+- Utilizar o GitBash
+- Uilizar o comando: ssh-keygen -t ed25519 -C (e-mail utilizado no GitHub)
+- Criar senha
+- Recolocar senha
+- Navegar até a pasta .ssh que foi criada
+- Utilizar o comando: cat id_ed25519.pub
+- Copiar o cósdigo gerado
+- Entrar no GitHub
+- Click na foto
+- Click em Settings
+- Click em SSH and GPG Keys
+- Click em New SSH
+- Coloque um título para sua máquina
+- Cole o código copiado no GitBash
+- Click em Add SSH
+- Confirme sua senha do GitHub
+- No GitBash, utilize o comando: eval $(ssh-agent -s)
+- Utilize o comando: ssh-add id_ed25519
+- Digite a senha que foi criada
+
+Clonando repositório via SSH:
+- Click em Code
+- Click em SSH
+- Copie o código SSH
+- Utilize o comando git clone + código SSH
+- Confirme com "yes"
+- Digite a senha de sua chave SSH

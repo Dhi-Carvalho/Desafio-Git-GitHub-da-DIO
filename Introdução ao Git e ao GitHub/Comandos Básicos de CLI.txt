@@ -1,0 +1,22 @@
+Comandos básicos de CLI no Windows:
+- cd /: Irá pra o diretório base
+- cd (nome do diretório): Irá para um diretório específico
+- cd ..: Irá retroceder um diretório
+- dir: Listar diretórios
+- mkdir (nome do diretório): Criar diretório
+- echo: Print de volta o que escrevemos
+- echo (nome do arquivo) > (nome do arquivo + extensão): Criar arquivo
+- del (nome do diretório): Apaga todos os arquivos do diretório
+- rmdir (nome do diretório): Apagar diretório
+- cls: limpar o terminal
+
+Comandos básicos de CLI no Unix:
+- cd /: Irá pra o diretório base
+- cd (nome do diretório): Irá para um diretório específico
+- cd ..: Irá retroceder um diretório
+- dir: Listar diretórios
+- mkdir (nome do diretório): Criar diretório
+- echo: Print de volta o que escrevemos
+- echo (nome do arquivo) > (nome do arquivo + extensão): Criar arquivo
+- rm -rf (nome do diretório): Apagar diretório
+- ls: limpar o terminal
